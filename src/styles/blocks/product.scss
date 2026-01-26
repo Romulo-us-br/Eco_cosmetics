@@ -1,0 +1,58 @@
+.prod {
+  @include page-grid;
+
+  padding-block: 100px;
+
+  &-title {
+    grid-column: span 2;
+
+    @include title24-green;
+  }
+
+  &-schem {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr; // lista | imagem
+    align-items: stretch;
+
+    padding-block: 30px 20px;
+
+    font-size: 16px;
+
+    @include poppin-400;
+    @include negative-margin-right;
+
+    &-ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      padding-top: 30px;
+
+      text-align: right;
+      list-style: none;
+
+      :nth-child(n + 2) {
+        margin-top: 6px;
+      }
+    }
+
+    &-img {
+      min-height: 320px;
+
+      background-image: url('../images/background/background-schem.png');
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain;
+    }
+  }
+
+  &-learn {
+    grid-column: span 2;
+
+    &-link {
+      @include underline-border;
+      @include link14-green;
+    }
+  }
+}

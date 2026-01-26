@@ -1,0 +1,60 @@
+.footer {
+  @include page-grid;
+
+  color: $footer-color;
+  background-color: $background-footer;
+
+  &-nav {
+    grid-column: span 2;
+    padding-block: 30px 20px;
+
+    &-ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+
+      &-li {
+        @include poppin-500;
+
+        font-size: 18px;
+        line-height: 150%;
+
+        &-link {
+          color: $footer-color;
+        }
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    grid-column: span 2;
+    gap: 20px;
+
+    &-i {
+      background-image: url(../images/icons/instagram-icon.png);
+    }
+
+    &-f {
+      background-image: url(../images/icons/facebook-icon.png);
+    }
+  }
+
+  &-reserved {
+    grid-column: span 2;
+    order: 5;
+    padding-block: 40px;
+    text-align: center;
+  }
+  &__desc {
+    display: flex;
+    grid-column: span 2;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-top: 40px;
+
+    @include poppin-400;
+  }
+}

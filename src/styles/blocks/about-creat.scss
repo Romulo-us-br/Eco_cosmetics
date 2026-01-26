@@ -1,0 +1,39 @@
+.about-creat {
+  @include page-grid;
+
+  &-title {
+    @include title24-green;
+
+    grid-column: span 2;
+    padding-block: 100px 10px;
+  }
+
+  &-desc {
+    grid-column: span 2;
+    padding-bottom: 30px;
+    font-size: 14px;
+    color: $dark-3;
+
+    @include poppin-400;
+  }
+
+  &-learn {
+    grid-column: span 2;
+
+    &-link {
+      @include link14-green;
+      @include underline-border;
+    }
+  }
+
+  &-siz {
+    grid-column: span 2;
+    padding-top: 25px;
+
+    &-button {
+      width: 100%;
+
+      @include button-green;
+    }
+  }
+}

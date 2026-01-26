@@ -1,0 +1,48 @@
+.contact {
+  @include page-grid;
+
+  padding-block: 100px;
+
+  &__info {
+    grid-column: span 2;
+    gap: 10px;
+    padding-bottom: 25px;
+
+    &-title {
+      @include title24-green;
+    }
+
+    &-desc {
+      @include poppin-400;
+
+      color: $dark-3;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-column: span 2;
+    gap: 20px;
+
+    &-input {
+      width: 100%;
+      padding-block: 5px;
+      border: none;
+      border-bottom: 1px solid #bdbdbd;
+
+      color: $input-color;
+
+      background-color: transparent;
+    }
+
+    &-link {
+      padding-top: 30px;
+
+      &-button {
+        width: 100%;
+
+        @include button-green;
+      }
+    }
+  }
+}

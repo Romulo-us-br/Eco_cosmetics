@@ -1,0 +1,77 @@
+.shop {
+  @include page-grid;
+
+  text-align: center;
+
+  &__content {
+    grid-column: 1/-1;
+
+    &-title {
+      @include poppin-600;
+
+      padding-bottom: 20px;
+      font-size: 24px;
+      color: $green-34;
+
+      @include spacing-upper;
+    }
+
+    &-nav {
+      &-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+      }
+
+      &-link {
+        @include poppin-400;
+
+        font-size: 14px;
+        line-height: 130%;
+
+        @include spacing-upper;
+
+        color: $link-w;
+
+        @include underline-border;
+      }
+    }
+
+    &-background {
+      @include negative-margin;
+
+      padding-top: 20px;
+
+      &-img {
+        width: 100%;
+      }
+    }
+
+    &-prod {
+      &-desc {
+        @include poppin-600;
+        @include spacing-upper;
+
+        padding-block: 20px 10px;
+        font-size: 18px;
+        color: $dark-3;
+      }
+
+      &-qt {
+        @include poppin-500;
+        @include spacing-upper;
+
+        padding-bottom: 30px;
+        font-size: 18px;
+        color: $dark-3;
+      }
+    }
+
+    &-button {
+      @include button-green;
+
+      width: 100%;
+    }
+  }
+}

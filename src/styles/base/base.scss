@@ -1,0 +1,31 @@
+.page {
+  background-color: $green-back;
+}
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  
+}
+
+.link {
+  text-decoration: none;
+}
+
+.icon-business {
+  display: block;
+
+  width: 100px;
+  height: 84px;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.social-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
