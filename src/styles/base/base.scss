@@ -1,11 +1,16 @@
 .page {
   scroll-behavior: smooth;
   background-color: $green-back;
-  &:has(:target) {
+
+  &:has([id="menu"]:target) {
     overflow: hidden;
   }
 
-  /* Isso diz ao navegador: "Se houver qualquer
+  &:has([id="menu-shop"]:target) {
+    overflow: hidden;
+  }
+
+  /* Isso diz ao navegador: "Se houver 
    elemento alvo (:target) ativo na página, remova
    a barra de rolagem da body (.page)". Assim, apenas
     a barra de rolagem do modal funcionará. */
@@ -30,13 +35,27 @@
 
   background-position: center;
   background-size: cover;
+
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .social-icon {
   display: block;
+
   width: 20px;
   height: 20px;
+
   background-size: cover;
+
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .tablet-show {

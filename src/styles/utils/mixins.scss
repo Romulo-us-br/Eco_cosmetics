@@ -171,23 +171,29 @@
 
   font-size: 16px;
   line-height: 130%;
-  color: #fff;
+  color: $white;
   text-transform: uppercase;
   letter-spacing: 15%;
 
-  background-color: #333;
+  background-color: $dark-3;
+
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $footer-color;
+  }
 }
 
 // borda inferior para links
 
 @mixin underline-border {
-  position: relative; // Necessário para o ::after se posicionar em relação ao link
-
+  position: relative; 
+  
   &::after {
     content: '';
 
     position: absolute;
-    bottom: -10px; // Cria o espaçamento que você queria com padding
+    bottom: -10px; 
     left: 0;
 
     width: 100%;
@@ -203,7 +209,6 @@
     color: #344f10;
   }
 
-  // A lógica correta: Quando o LINK recebe hover, o AFTER muda
   &:hover::after {
     opacity: 1;
   }

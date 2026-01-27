@@ -28,7 +28,7 @@
     <div class=" header__content">
       <h1 class="header__content-title">Brand of eco-cosmetics and magic candles</h1>
       <p class="header__content-desc">20% of sales at a wild bird shelter</p>
-      <a href="#" class="header__content-link">
+      <a href="#shop" class="header__content-link">
         <button class="header__content-link-button">Shop</button>
       </a>
 
@@ -79,9 +79,9 @@
       </div>
       <nav class="menu-option">
         <ul class="menu-option-ul">
-          <li class="menu-option-ul-li"><a href="" class="link menu-option-ul-li-link">Shop</a></li>
-          <li class="menu-option-ul-li"><a href="" class="link menu-option-ul-li-link">Contact</a></li>
-          <li class="menu-option-ul-li"><a href="" class="link menu-option-ul-li-link">About</a></li>
+          <li class="menu-option-ul-li"><a href="#shop" class="link menu-option-ul-li-link">Shop</a></li>
+          <li class="menu-option-ul-li"><a href="#contact" class="link menu-option-ul-li-link">Contact</a></li>
+          <li class="menu-option-ul-li"><a href="#about" class="link menu-option-ul-li-link">About</a></li>
         </ul>
       </nav>
     </aside>
@@ -232,7 +232,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact_content">
         <div class="contact__info">
           <h1 class="contact__info-title">
@@ -242,13 +242,11 @@
           </p>
         </div>
         <form class="contact__form">
-          <input type="text" placeholder="Your Name" class="input contact__form-input">
-          <input type="email" placeholder="E-Mail" class="input contact__form-input">
-          <input type="tel" placeholder="Phone Number" class="input contact__form-input">
-          <input type="text" placeholder="Your Message" class="input contact__form-input message">
-          <a href="" class="contact__form-link">
-            <button class="contact__form-link-button">Send a message</button>
-          </a>
+          <input type="text" placeholder="Your Name" class="input contact__form-input" required>
+          <input type="email" placeholder="E-Mail" class="input contact__form-input" required>
+          <input type="tel" placeholder="Phone Number" class="input contact__form-input" required pattern="^[0-9+]+$" title="Only numbers and + allowed">
+          <textarea placeholder="Your Message" class="input contact__form-input-textarea message" required></textarea>
+          <button type="submit" class="contact__form-link-button">Send a message</button>
         </form>
       </div>
       <div class="contact-img">
@@ -283,13 +281,13 @@
       <p class="footer__desc-country">
         Ukraine
       </p>
-      <p class="footer__desc-email">
+      <a href="mailto:support.mountain@gmail.com" class="footer__desc-info link">
         support.mountain@gmail.com
-      </p>
-      <p class="footer__desc-tel">
+      </a>
+      <a href="tel:+380934476839" class="footer__desc-info link">
         +380934476839
-      </p>
-      <p class="footer_desc-">
+      </a>
+      <p class="footer_desc-info">
         Support is available Monday - Friday 9am-6pm
       </p>
     </div>

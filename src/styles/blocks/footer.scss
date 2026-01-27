@@ -85,6 +85,13 @@
 
     @include poppin-400;
 
+    &-info {
+      @include poppin-400;
+
+        color: $footer-color;
+
+    }
+
     @include on-tabblet {
       grid-column: 4/span 3;
       padding-top: 30px;

@@ -40,7 +40,14 @@
 
       color: $input-color;
 
-      background-color: transparent;
+      background-color: inherit;
+
+      &-textarea {
+        border: none;
+        border-bottom: 1px solid #bdbdbd;
+        background-color: inherit;
+
+      }
 
       @include on-desktop {
         &:nth-child(4) {
@@ -48,6 +55,15 @@
         }
       }
 
+    }
+
+    &-input:valid {
+      border-bottom: 1px solid green;
+    }
+
+    &-input:focus:invalid {
+      border-bottom: 1px solid red;
+      outline: none;
     }
 
     &-link {
@@ -64,7 +80,7 @@
   &-img {
     @include column-span236;
 
-      position: relative;
+    position: relative;
 
     @include on-desktop {
       grid-column: 7/span 6;

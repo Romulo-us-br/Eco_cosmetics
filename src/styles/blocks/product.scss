@@ -57,9 +57,18 @@
     &-img {
       min-height: 320px;
 
-      @include column-span13;
-
       background-image: url('../images/background/background-schem.png');
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain;
+
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @include column-span13;
 
       @include on-tabblet {
         background-image: url('../images/background/background-schem-02.png');
@@ -69,10 +78,6 @@
         grid-column: span 4;
         background-image: url('../images/background/background-schem-desktop.png');
       }
-
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: contain;
     }
   }
 
