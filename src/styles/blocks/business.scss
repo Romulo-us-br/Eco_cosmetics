@@ -9,6 +9,10 @@
     gap: 20px;
     place-items: center;
 
+    @include on-desktop{
+      grid-column: span 4;
+    }
+
     &-img {
       &-1 {
         background-image: url(../images/business/business_icon-1.png);

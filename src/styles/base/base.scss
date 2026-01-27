@@ -1,12 +1,21 @@
 .page {
+  scroll-behavior: smooth;
   background-color: $green-back;
+  &:has(:target) {
+    overflow: hidden;
+  }
+
+  /* Isso diz ao navegador: "Se houver qualquer
+   elemento alvo (:target) ativo na página, remova
+   a barra de rolagem da body (.page)". Assim, apenas
+    a barra de rolagem do modal funcionará. */
 }
 
 .icon {
   display: block;
   width: 24px;
   height: 24px;
-  
+
 }
 
 .link {
@@ -28,4 +37,24 @@
   width: 20px;
   height: 20px;
   background-size: cover;
+}
+
+.tablet-show {
+  @include on-mobile {
+    display: none;
+  }
+
+}
+
+.desktop-show {
+  @include on-tabblet-hide {
+    display: none;
+  }
+}
+
+
+
+
+.green-text {
+  color: $green-34;
 }

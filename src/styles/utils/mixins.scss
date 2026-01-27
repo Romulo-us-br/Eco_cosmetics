@@ -35,6 +35,18 @@
   }
 }
 
+@mixin on-mobile {
+  @media(max-width:$mobile-width) {
+    @content;
+  }
+}
+
+@mixin on-tabblet-hide {
+  @media (max-width:1279px) {
+    @content;
+  }
+}
+
 // grid-configs
 @mixin page-grid {
   --columns: 2;
@@ -54,6 +66,24 @@
     --columns: 12;
 
     padding-inline: 50px;
+  }
+}
+
+@mixin page-grid-nopadd {
+  --columns: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+
+  @include on-tabblet {
+    --columns: 6;
+
+    column-gap: 24px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+
   }
 }
 
@@ -83,17 +113,7 @@
   }
 }
 
-@mixin background-top {
-  width: 100%;
 
-  @include on-tabblet {
-    width: 100%;
-  }
-
-  @include on-desktop {
-    width: 100%;
-  }
-}
 
 // font header
 @mixin font-header-title {
@@ -126,6 +146,10 @@
 
   font-size: 24px;
   color: $green-34;
+
+  @include on-desktop {
+    font-size: 36px;
+  }
 }
 
 // Fonte para o link verde com borda embaixo
@@ -183,4 +207,79 @@
   &:hover::after {
     opacity: 1;
   }
+}
+
+// paddings
+
+@mixin page-padding-bottom {
+  padding-bottom: 100px;
+
+  @include on-tabblet {
+    padding-bottom: 130px;
+  }
+
+  @include on-desktop {
+    padding-bottom: 200px;
+  }
+}
+
+@mixin page-padding-top {
+  padding-top: 100px;
+
+  @include on-tabblet {
+    padding-top: 130px;
+  }
+
+  @include on-desktop {
+    padding-top: 200px;
+  }
+}
+
+@mixin page-padding-block {
+  padding-block: 100px;
+
+  @include on-tabblet {
+    padding-block: 130px;
+  }
+
+  @include on-desktop {
+    padding-block: 200px;
+  }
+}
+
+// column span
+@mixin column-span236 {
+  grid-column: span 2;
+
+  @include on-tabblet {
+    grid-column: span 3;
+  }
+
+  @include on-desktop {
+    grid-column: span 6;
+  }
+}
+
+@mixin column-span234 {
+  grid-column: span 2;
+
+  @include on-tabblet {
+    grid-column: span 3;
+  }
+
+  @include on-desktop {
+    grid-column: 2/span 4;
+  }
+}
+
+
+
+@mixin column-span13 {
+  grid-column: span 1;
+
+  @include on-tabblet {
+    grid-column: span 3;
+  }
+
+
 }
