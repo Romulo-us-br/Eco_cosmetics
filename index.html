@@ -241,10 +241,11 @@
           <p class="contect__info-desc">We will help you choose a product that suits you and answer your other questions
           </p>
         </div>
-        <form class="contact__form">
+        <form class="contact__form" onsubmit="this.reset(); return false;">
           <input type="text" placeholder="Your Name" class="input contact__form-input" required>
           <input type="email" placeholder="E-Mail" class="input contact__form-input" required>
-          <input type="tel" placeholder="Phone Number" class="input contact__form-input" required pattern="^[0-9+]+$" title="Only numbers and + allowed">
+          <input type="tel" placeholder="Phone Number" class="input contact__form-input" required pattern="^[0-9+]+$"
+            title="Only numbers and + allowed">
           <textarea placeholder="Your Message" class="input contact__form-input-textarea message" required></textarea>
           <button type="submit" class="contact__form-link-button">Send a message</button>
         </form>
@@ -277,10 +278,11 @@
 
     <p class="footer-reserved"><span class="desktop-show">Copyright</span>© 2019 witch of mountain winds</p>
 
-    <div class="footer__desc" >
-      <p class="footer__desc-country">
+    <div class="footer__desc">
+      <a href="https://www.google.com/maps/place/Ucr%C3%A2nia/@48.7673154,31.1824373,6z/data=!3m1!4b1!4m6!3m5!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799!16zL20vMDd0MjE?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D"
+        class="link footer__desc-info" target="_blank">
         Ukraine
-      </p>
+      </a>
       <a href="mailto:support.mountain@gmail.com" class="footer__desc-info link">
         support.mountain@gmail.com
       </a>
